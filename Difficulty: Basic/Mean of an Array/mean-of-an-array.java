@@ -1,0 +1,12 @@
+class Solution {
+    public static int findMean(int[] arr) {
+        // code here
+        int sum = 0;
+        
+        for (int num : arr) {
+            sum += num;
+        }
+        
+        return (int)Math.floor(sum / arr.length);
+    }
+};
