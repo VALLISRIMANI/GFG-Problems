@@ -1,37 +1,24 @@
-class myQueue {
-    Queue<Integer> queue;
-    public myQueue() {
-        // initialize your queue
-        queue = new LinkedList<>();
+// User function Template for Java
+class Solution {
+    public void enqueue(Queue<Integer> q, int x) {
+        // code here
+        q.offer(x);
     }
 
-    public void enqueue(int x) {
-        // insert x into queue
-        queue.offer(x);
+    public void dequeue(Queue<Integer> q) {
+        // code here
+        q.poll();
     }
 
-    public void dequeue() {
-        // remove front element from queue
-        queue.poll();
+        
+    public int front(Queue<Integer> q) {
+        // code here
+        return q.peek();
     }
+        
 
-    public int getFront() {
-        // return the front element of the queue
-        return queue.isEmpty() ? -1 : queue.peek();
-    }
-
-    public int getRear() {
-        // return the rear element of the queue
-        return queue.isEmpty() ? -1 : ((LinkedList<Integer>) queue).getLast();
-    }
-
-    public boolean isEmpty() {
-        // check whether the queue is empty
-        return queue.isEmpty();
-    }
-
-    public int size() {
-        // return the size of the queue
-        return queue.size();
+    public boolean find(Queue<Integer> q, int x) {
+        // code here
+        return q.contains(x);
     }
 }
