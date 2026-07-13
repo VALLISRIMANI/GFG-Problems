@@ -2,19 +2,23 @@ class Solution {
     static int lis(int arr[]) {
         // code here
         int n = arr.length;
-        int[] dp = new int[n];
-        Arrays.fill(dp, 1);
+        int[] result = new int[n];
+        result[0] = arr[0];
+        int len = 1;
 
-        int maxLength = 1;
         for (int i = 1; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                if (arr[j] < arr[i]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+            if (arr[i] > result[len - 1]) {
+                result[len] = arr[i];
+                len++;
+            } else {
+                int low = Arrays.binarySearch(result, 0, len, arr[i]);
+                if (low < 0) {
+                    low = -(low + 1);
                 }
+                result[low] = arr[i];
             }
-            maxLength = Math.max(maxLength, dp[i]);
         }
 
-        return maxLength;
+        return len;
     }
 }
