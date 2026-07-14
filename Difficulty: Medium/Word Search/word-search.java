@@ -1,13 +1,13 @@
 class Solution {
-    int[][] dir = {
+    final static int[][] dir = {
         {-1, 0},
         {1, 0},
         {0, -1},
         {0, 1}
     };
     
-    public boolean isWordExist(char[][] mat, String word) {
-        // Code here
+    public static boolean wordSearch(char mat[][], String word) {
+        // code here
         int m = mat.length;
         int n = mat[0].length;
         
@@ -22,7 +22,7 @@ class Solution {
         return false;
     }
     
-    public boolean dfs(char[][] mat, String word, int i, int j, int idx) {
+    public static boolean dfs(char[][] mat, String word, int i, int j, int idx) {
         if (idx == word.length()) return true;
         
         if (i < 0 || j < 0 || i >= mat.length || j >= mat[0].length) return false;
