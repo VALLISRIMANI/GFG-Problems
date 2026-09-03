@@ -1,6 +1,7 @@
 class Solution {
     static boolean canAttend(int[][] arr) {
         // code here
+        /*
         int n = arr.length;
         Arrays.sort(arr, (x, y) -> x[1] - y[1]);
 
@@ -14,5 +15,17 @@ class Solution {
         }
 
         return result == n;
+        */
+        
+        int n = arr.length;
+        Arrays.sort(arr, (x, y) -> x[1] - y[1]);
+        
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i][1] > arr[i + 1][0]) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
