@@ -1,0 +1,7 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/sum-of-permutations/1">Sum of Permutations of Distinct Digits</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 14pt;"><span style="font-size: 18.6667px;">Given an array <strong>arr[]</strong> containing distinct digits from 1 to 9, find the <strong>sum </strong>of the numbers formed by all <strong>permutations </strong>of the digits in arr[].</span></span></p>
+<p><span style="font-size: 14pt;"><span style="font-size: 18.6667px;"><strong>Examples :</strong></span></span></p>
+<pre><span style="font-size: 14pt;"><strong>Input:</strong> arr[] = [1, 2, 3]
+<strong>Output:</strong> 1332<strong> <br>Explanation: </strong>The possible permutations are 123, 132, 213, 231, 312, and 321. <br>Hence, sum = 123 + 132 + 312 + 213 + 231 + 321 = 1332.</span></pre>
+<pre><span style="font-size: 14pt;"><strong>Input:</strong> arr[] = [1, 2]
+<strong>Output:</strong> 33<br><strong>Explanation: </strong>The possible permutations are 12, 21. Hence, sum = 12 + 21 = 33<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">.</span></span></pre>
+<p><span style="font-size: 14pt;"><strong>Constraints:</strong><br>1 ≤ arr.size() ≤ 5<br>1 ≤ arr[i] ≤ 9</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Modular Arithmetic</code>&nbsp;
