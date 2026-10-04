@@ -1,24 +1,17 @@
 class Solution {
     public static int findSum(String s) {
         // code here
-        int sum = 0;
-
-        while (!s.isEmpty()) {
-            int i = 0;
-            while (i < s.length() && !Character.isDigit(s.charAt(i))) {
-                i++;
+        int sum = 0, num = 0;
+        
+        for (char ch : s.toCharArray()) {
+            if (ch >= '0' && ch <= '9') {
+                num = num * 10 + ch - '0';
+            } else {
+                sum += num;
+                num = 0;
             }
-
-            if (i == s.length()) break;
-
-            int j = i;
-            while (j < s.length() && Character.isDigit(s.charAt(j))) {
-                j++;
-            }
-
-            sum += Integer.parseInt(s.substring(i, j));
-            s = s.substring(j);
         }
+        sum += num;
         
         return sum;
     }
