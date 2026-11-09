@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/shortest-uncommon-subsequence5746/1">Shortest Uncommon Subsequence</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given two strings <strong>s</strong> and <strong>t</strong>, find the length of the <strong>shortest</strong> subsequence of s that is <strong>not</strong> a subsequence of t. If no such subsequence exists, return<strong> -1</strong>.</span></p>
+<p><span style="font-size: 18px;">A subsequence is a sequence of characters that appears in the same relative order, but not necessarily contiguously.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><strong><span style="font-size: 18px;">Input:</span> </strong><span style="font-size: 18px;">s = "geeks", t = "geek"
+<strong>Output:</strong> 1
+<strong>Explanation: </strong>In geeks,<strong> </strong>"s" is a subsequence of s but not a subsequence of t. Hence, the shortest uncommon subsequence has length 1.</span></pre>
+<pre><span style="font-size: 18px;"><strong style="font-size: 18px;">Input:</strong> </span><span style="font-size: 18px;">s<strong> </strong>=<strong> </strong>"babab"</span><span style="font-size: 18px;">, t</span><span style="font-size: 18px;"><strong> </strong>=<strong> </strong>"babba"</span>
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Output:</span> </strong></span><span style="font-size: 18px;">3</span>
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Explanation:</span> </strong></span><span style="font-size: 18px;">There is no subsequence of s with length less than 3 that is absent from t. One such shortest uncommon subsequence is "aab".</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong></span><br><span style="font-size: 18px;">1 ≤ |s|, |t| ≤ 10<sup>3</sup></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Dynamic Programming</code>&nbsp;
