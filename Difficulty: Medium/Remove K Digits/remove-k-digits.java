@@ -1,39 +1,34 @@
 class Solution {
     public String removeKdig(String s, int k) {
         // code here
-        int n = s.length();
-        if (k >= n) return "0";
-        
-        Stack<Character> st = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            
-            while (!st.isEmpty() && k > 0 && st.peek() > ch) {
+        if (s.length() == k) return "0";
+
+        Stack<Integer> st = new Stack<>();
+
+        for (char ch : s.toCharArray()) {
+            int digit = ch - '0';
+
+            while (!st.isEmpty() && k > 0 && digit < st.peek()) {
                 st.pop();
                 k--;
             }
-            
-            st.push(ch);
+
+            st.push(digit);
         }
-        
-        while (k > 0 && !st.isEmpty()) {
+
+        while (!st.isEmpty() && k > 0) {
             st.pop();
             k--;
         }
-        
+
+        if (st.isEmpty()) return "0";
+
         StringBuilder sb = new StringBuilder();
         while (!st.isEmpty()) {
             sb.append(st.pop());
         }
-        
-        sb.reverse();
-        
-        int index = 0;
-        while (index < sb.length() && sb.charAt(index) == '0') {
-            index++;
-        }
-        String result = sb.substring(index);
-        
+
+        String result = sb.reverse().toString().replaceFirst("^0+", "");
         return result.isEmpty() ? "0" : result;
     }
 }
